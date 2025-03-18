@@ -1,9 +1,9 @@
 <?php
 
-namespace Psr\Http\Server;
+namespace Lwd\Http\Server;
 
-use Psr\Http\Message\ResponseInterface;
-use Psr\Http\Message\ServerRequestInterface;
+use Lwd\Http\Message\ResponseInterface;
+use Lwd\Http\Message\ServerRequestInterface;
 
 /**
  * Participant in processing a server request and response.
@@ -20,6 +20,10 @@ interface MiddlewareInterface
      * Processes an incoming server request in order to produce a response.
      * If unable to produce the response itself, it may delegate to the provided
      * request handler to do so.
+     *
+     * @param ServerRequestInterface $request
+     * @param RequestHandlerInterface $handler
+     * @return ResponseInterface
      */
-    public function process(ServerRequestInterface $request, RequestHandlerInterface $handler): ResponseInterface;
+    public function process($request, $handler);
 }
