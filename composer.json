@@ -1,5 +1,5 @@
 {
-    "name": "psr/http-server-middleware",
+    "name": "lwd/http-server-middleware",
     "description": "Common interface for HTTP server-side middleware",
     "keywords": [
         "psr",
@@ -21,14 +21,24 @@
     "support": {
         "source": "https://github.com/php-fig/http-server-middleware"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/johnathanlouie/http-message"
+        },
+        {
+            "type": "vcs",
+            "url": "https://github.com/johnathanlouie/http-server-handler"
+        }
+    ],
     "require": {
-        "php": ">=7.0",
-        "psr/http-message": "^1.0 || ^2.0",
-        "psr/http-server-handler": "^1.0"
+        "php": "^5.5",
+        "lwd/http-message": "^1.0 || ^2.0",
+        "lwd/http-server-handler": "^1.0"
     },
     "autoload": {
         "psr-4": {
-            "Psr\\Http\\Server\\": "src/"
+            "Lwd\\Http\\Server\\": "src/"
         }
     },
     "extra": {
